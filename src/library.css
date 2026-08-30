@@ -1,0 +1,15 @@
+/* Base styles required by every loader. They make the components work without Tailwind CSS. */
+[role='status'].relative.inline-flex.items-center.justify-center {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  line-height: 0;
+}
+
+[role='status'].relative.inline-flex.items-center.justify-center > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

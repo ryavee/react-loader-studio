@@ -1,0 +1,58 @@
+{
+  "name": "react-loader-studio",
+  "private": false,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A collection of animated, accessible SVG loaders for React.",
+  "keywords": ["react", "loader", "spinner", "loading", "typescript"],
+  "license": "MIT",
+  "sideEffects": ["./dist/style.css"],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/types/library.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/library.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "npm run build:site && npm run build:library",
+    "build:site": "vite build",
+    "build:library": "vite build --mode library && tsc -p tsconfig.lib.json",
+    "preview": "vite preview",
+    "clean": "node --input-type=module -e \"import { rm } from 'node:fs/promises'; await Promise.all(['dist', 'site-dist'].map((path) => rm(path, { recursive: true, force: true })));\"",
+    "lint": "tsc --noEmit",
+    "prepack": "npm run clean && npm run build",
+    "pack:check": "npm pack --dry-run"
+  },
+  "dependencies": {
+    "@google/genai": "^2.4.0",
+    "lucide-react": "^0.546.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "express": "^4.21.2",
+    "dotenv": "^17.2.3",
+    "motion": "^12.23.24"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "@vitejs/plugin-react": "^5.0.4",
+    "@types/node": "^22.14.0",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.25.0",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.3",
+    "@types/express": "^4.17.21"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  }
+}

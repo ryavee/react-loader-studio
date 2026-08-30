@@ -1,0 +1,7 @@
+{
+  "name": "React Loader Studio",
+  "description": "A developer-focused React loader library featuring 21 modern animations, real-time interactive playground, customizable dimensions, colors, and speeds for React 18 & 19.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

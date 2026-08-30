@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="favicon-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E" />
+      <stop offset="100%" stop-color="#115E59" />
+    </linearGradient>
+    <linearGradient id="ring-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5EEAD4" />
+      <stop offset="50%" stop-color="#14B8A6" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded Squircle Base -->
+  <rect width="64" height="64" rx="16" fill="url(#favicon-bg)" />
+
+  <!-- Outer Track Ring -->
+  <circle cx="32" cy="32" r="21" stroke="#134E4A" stroke-width="3" opacity="0.6" />
+
+  <!-- Angled Orbital Ellipse 1 -->
+  <ellipse
+    cx="32"
+    cy="32"
+    rx="21"
+    ry="9"
+    stroke="url(#ring-glow)"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-dasharray="75 40"
+    transform="rotate(-30 32 32)"
+  />
+
+  <!-- Angled Orbital Ellipse 2 -->
+  <ellipse
+    cx="32"
+    cy="32"
+    rx="21"
+    ry="9"
+    stroke="#2DD4BF"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-dasharray="70 45"
+    transform="rotate(45 32 32)"
+  />
+
+  <!-- Orbiting Satellite Dot -->
+  <circle cx="48" cy="24" r="3" fill="#CCFBF1" />
+
+  <!-- Center Glowing Core Nucleus -->
+  <circle cx="32" cy="32" r="6.5" fill="#5EEAD4" />
+  <circle cx="32" cy="32" r="3.5" fill="#FFFFFF" />
+</svg>
