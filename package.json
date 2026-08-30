@@ -4,12 +4,37 @@
   "version": "1.0.0",
   "type": "module",
   "description": "A collection of animated, accessible SVG loaders for React.",
-  "keywords": ["react", "loader", "spinner", "loading", "typescript"],
+  "keywords": [
+    "react",
+    "loader",
+    "spinner",
+    "loading",
+    "typescript",
+    "svg",
+    "animation",
+    "react-loader"
+  ],
   "license": "MIT",
-  "sideEffects": ["./dist/style.css"],
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryavee/react-loader-studio.git"
+  },
+
+  "homepage": "https://react-loader-studio.vercel.app/",
+
+  "bugs": {
+    "url": "https://github.com/ryavee/react-loader-studio/issues"
+  },
+
+  "sideEffects": [
+    "./dist/style.css"
+  ],
+
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/types/library.d.ts",
+
   "exports": {
     ".": {
       "types": "./dist/types/library.d.ts",
@@ -18,7 +43,13 @@
     },
     "./style.css": "./dist/style.css"
   },
-  "files": ["dist", "README.md", "LICENSE"],
+
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "npm run build:site && npm run build:library",
@@ -30,27 +61,28 @@
     "prepack": "npm run clean && npm run build",
     "pack:check": "npm pack --dry-run"
   },
+
   "dependencies": {
     "@google/genai": "^2.4.0",
-    "lucide-react": "^0.546.0",
-    "react": "^19.0.1",
-    "react-dom": "^19.0.1",
-    "express": "^4.21.2",
     "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "lucide-react": "^0.546.0",
     "motion": "^12.23.24"
   },
+
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.14",
-    "@vitejs/plugin-react": "^5.0.4",
+    "@types/express": "^4.17.21",
     "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.4",
     "autoprefixer": "^10.4.21",
     "esbuild": "^0.25.0",
     "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
-    "vite": "^6.2.3",
-    "@types/express": "^4.17.21"
+    "vite": "^6.4.3"
   },
+
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
