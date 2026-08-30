@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
           {/* Quick Links */}
           <div className="flex items-center gap-6 text-xs font-bold text-slate-700">
             <a
-              href="https://github.com"
+              href="https://github.com/ryavee/react-loader-studio"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 hover:text-teal-800 transition-colors"
@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
               <span>GitHub</span>
             </a>
             <a
-              href="https://www.npmjs.com"
+              href="https://www.npmjs.com/package/react-loader-studio"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 hover:text-teal-800 transition-colors"

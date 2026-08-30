@@ -143,7 +143,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
               </span>
             </button>
             <a
-              href="https://github.com"
+              href="https://github.com/ryavee/react-loader-studio"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-2 py-2.5 text-xs font-semibold text-slate-700 bg-white border border-slate-200 rounded-xl shadow-xs"
