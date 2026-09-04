@@ -3,7 +3,7 @@ import { LoaderProps } from '../../types';
 
 export const ECGLoader: React.FC<LoaderProps> = ({
   size = 54,
-  color = '#0F766E',
+  color = '#0F766E', 
   speed = 1,
   className = '',
 }) => {
