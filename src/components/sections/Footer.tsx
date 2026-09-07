@@ -1,6 +1,6 @@
 import React from 'react';
 import { OrbitLoader } from '../loaders/OrbitLoader';
-import { Github, Package, FileText, Heart } from 'lucide-react';
+import { Github, Package, FileText } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
