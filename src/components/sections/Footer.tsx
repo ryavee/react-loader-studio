@@ -1,6 +1,7 @@
 import React from 'react';
 import { OrbitLoader } from '../loaders/OrbitLoader';
 import { Github, Package, FileText } from 'lucide-react';
+import packageJson from '../../../package.json';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -61,7 +62,7 @@ export const Footer: React.FC = () => {
           </div>
           <div className="flex items-center gap-2 font-mono text-[11px]">
             <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 border border-slate-200/60">
-              v1.0.0
+              v{packageJson.version}
             </span>
           </div>
         </div>
