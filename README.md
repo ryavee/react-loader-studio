@@ -3,7 +3,7 @@
 A collection of beautiful, animated, customizable SVG loading indicators for React.
 
 [![npm version](https://img.shields.io/npm/v/react-loader-studio.svg?logo=npm)](https://www.npmjs.com/package/react-loader-studio)
-[![npm downloads](https://img.shields.io/npm/dm/react-loader-studio.svg?logo=npm)](https://www.npmjs.com/package/react-loader-studio)
+[![npm downloads](https://img.shields.io/npm/dt/react-loader-studio.svg?logo=npm)](https://www.npmjs.com/package/react-loader-studio)
 [![license](https://img.shields.io/npm/l/react-loader-studio.svg)](LICENSE)
 
 [Live Demo](https://react-loader-studio.vercel.app/) · [GitHub Repository](https://github.com/ryavee/react-loader-studio) · [npm Package](https://www.npmjs.com/package/react-loader-studio)
