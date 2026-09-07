@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ryavee/react-loader-studio.git"
+    "url": "git+https://github.com/ryavee/react-loader-studio.git"
   },
   "homepage": "https://react-loader-studio.vercel.app/",
   "bugs": {
