@@ -72,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ onSelectPlaygroundLoader }) => {
                 </Button>
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/ryavee/react-loader-studio"
                 target="_blank"
                 rel="noopener noreferrer"
               >
