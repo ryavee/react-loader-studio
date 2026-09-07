@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
-import { ArrowRight, Github, Sparkles, Play, Sliders, Check, Copy } from 'lucide-react';
-import { OrbitLoader } from '../loaders/OrbitLoader';
-import { PulseLoader } from '../loaders/PulseLoader';
-import { ECGLoader } from '../loaders/ECGLoader';
-import { HeartbeatLoader } from '../loaders/HeartbeatLoader';
+import { ArrowRight, Github, Check, Copy } from 'lucide-react';
+
 import { LOADERS_REGISTRY } from '../loaders';
 
 interface HeroProps {
@@ -17,6 +14,30 @@ export const Hero: React.FC<HeroProps> = ({ onSelectPlaygroundLoader }) => {
   const [previewColor, setPreviewColor] = useState('#0F766E');
   const [previewSpeed, setPreviewSpeed] = useState(1);
   const [copiedCode, setCopiedCode] = useState(false);
+  const [fps, setFps] = useState<number | null>(null);
+
+  useEffect(() => {
+    let animationFrameId = 0;
+    let frameCount = 0;
+    let lastSampleTime = performance.now();
+
+    const measureFps = (now: number) => {
+      frameCount += 1;
+      const elapsed = now - lastSampleTime;
+
+      if (elapsed >= 1000) {
+        setFps(Math.round((frameCount * 1000) / elapsed));
+        frameCount = 0;
+        lastSampleTime = now;
+      }
+
+      animationFrameId = requestAnimationFrame(measureFps);
+    };
+
+    animationFrameId = requestAnimationFrame(measureFps);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
 
   const activeLoaderItem = LOADERS_REGISTRY.find((l) => l.id === activePreviewId) || LOADERS_REGISTRY[0];
   const ActiveComponent = activeLoaderItem.component;
@@ -106,18 +127,21 @@ export const Hero: React.FC<HeroProps> = ({ onSelectPlaygroundLoader }) => {
               <div className="px-5 py-3.5 bg-slate-50/90 border-b border-slate-200/90 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-slate-300" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-slate-300" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-slate-300" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
                   </div>
                   <span className="text-xs font-mono text-slate-500 font-medium ml-2">
                     components/loaders/{activeLoaderItem.name}.tsx
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="inline-flex items-center gap-1 text-[11px] font-mono text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md">
+                  <span
+                    className="inline-flex items-center gap-1 text-[11px] font-mono text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md"
+                    aria-label={fps === null ? 'Measuring frames per second' : `Live ${fps} frames per second`}
+                  >
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    Live 60 FPS
+                    Live {fps ?? '—'} FPS
                   </span>
                 </div>
               </div>
