@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
 import { Github, Menu, X, Terminal, Copy, Check } from 'lucide-react';
 import { OrbitLoader } from '../loaders/OrbitLoader';
 

@@ -4,7 +4,9 @@ A collection of beautiful, animated, customizable SVG loading indicators for Rea
 
 [![npm version](https://img.shields.io/npm/v/react-loader-studio.svg?logo=npm)](https://www.npmjs.com/package/react-loader-studio)
 [![npm downloads](https://img.shields.io/npm/dt/react-loader-studio.svg?logo=npm)](https://www.npmjs.com/package/react-loader-studio)
-[![license](https://img.shields.io/npm/l/react-loader-studio.svg)](LICENSE)
+[![License](https://img.shields.io/npm/l/react-loader-studio.svg)](LICENSE)
+[![React](https://img.shields.io/badge/React-18%2B-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-supported-blue?logo=typescript)](https://www.typescriptlang.org/)
 
 [Live Demo](https://react-loader-studio.vercel.app/) · [GitHub Repository](https://github.com/ryavee/react-loader-studio) · [npm Package](https://www.npmjs.com/package/react-loader-studio)
 
