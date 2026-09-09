@@ -71,11 +71,10 @@ export default function UserProfile() {
                   <button
                     key={mgr}
                     onClick={() => setPkgManager(mgr)}
-                    className={`px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-lg transition-all cursor-pointer ${
-                      pkgManager === mgr
+                    className={`px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-lg transition-all cursor-pointer ${pkgManager === mgr
                         ? 'bg-white text-teal-900 shadow-2xs'
                         : 'text-slate-600 hover:text-slate-950'
-                    }`}
+                      }`}
                   >
                     {mgr}
                   </button>

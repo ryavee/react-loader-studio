@@ -102,6 +102,17 @@ export const Hero: React.FC<HeroProps> = ({ onSelectPlaygroundLoader }) => {
                 </Button>
               </a>
             </div>
+            <a
+              href="https://github.com/ryavee/react-loader-studio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-center lg:justify-start gap-1.5 pt-1 text-sm font-semibold text-slate-500 transition-colors hover:text-slate-900"
+            >
+              <span className="transition-transform duration-200 group-hover:scale-110">
+                ⭐
+              </span>
+              <span>Like React Loader Studio? Star it on GitHub</span>
+            </a>
 
             {/* Quick Metrics / Value Highlights */}
             <div className="pt-6 grid grid-cols-3 gap-4 border-t border-slate-200/90 max-w-lg mx-auto lg:mx-0 text-left">
@@ -188,11 +199,10 @@ export const Hero: React.FC<HeroProps> = ({ onSelectPlaygroundLoader }) => {
                       <button
                         key={item.id}
                         onClick={() => setActivePreviewId(item.id)}
-                        className={`p-2 rounded-xl border flex flex-col items-center justify-center gap-1 transition-all duration-150 cursor-pointer ${
-                          isSelected
-                            ? 'bg-white border-teal-600 shadow-xs ring-2 ring-teal-500/20'
-                            : 'bg-white/60 hover:bg-white border-slate-200 hover:border-slate-300'
-                        }`}
+                        className={`p-2 rounded-xl border flex flex-col items-center justify-center gap-1 transition-all duration-150 cursor-pointer ${isSelected
+                          ? 'bg-white border-teal-600 shadow-xs ring-2 ring-teal-500/20'
+                          : 'bg-white/60 hover:bg-white border-slate-200 hover:border-slate-300'
+                          }`}
                       >
                         <div className="h-8 flex items-center justify-center">
                           <Comp size={22} color={isSelected ? '#0F766E' : '#64748B'} speed={1} />
