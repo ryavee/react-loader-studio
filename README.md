@@ -8,16 +8,26 @@ A collection of beautiful, animated, customizable SVG loading indicators for Rea
 
 [Live Demo](https://react-loader-studio.vercel.app/) · [GitHub Repository](https://github.com/ryavee/react-loader-studio) · [npm Package](https://www.npmjs.com/package/react-loader-studio)
 
+## Why React Loader Studio?
+
+- React Loader Studio provides ready-to-use loading animations for React applications without requiring you to build SVG animations from scratch.
+
+- It includes lightweight SVG-based loaders that can be customized directly through React props such as `size`, `color`, `speed`, and `className`.
+
+- The live playground lets you preview loaders and experiment with their configuration before adding them to your project.
+
 ## Features
 
-- 21 animated SVG loader components
-- React support for React 18 and newer
-- TypeScript declarations included
+- Animated SVG loader and spinner components for React
+- Compatible with React 18 and newer
+- Full TypeScript declarations included
 - Customizable `size`, `color`, and animation `speed`
 - `className` support for integrating with your own styles
 - Accessible loading states with `role="status"` and descriptive `aria-label` values
 - Lightweight SVG-based animations
 - Works in projects with or without Tailwind CSS
+- Interactive playground for previewing and customizing loaders
+- Real-time JSX configuration examples
 
 ## Installation
 
