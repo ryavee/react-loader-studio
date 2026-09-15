@@ -3,7 +3,7 @@
   "private": false,
   "version": "1.0.3",
   "type": "module",
-  "description": "A collection of animated, accessible SVG loaders for React.",
+  "description": "A lightweight React loader library featuring animated SVG loaders and spinners with customizable size, color, speed, and TypeScript support.",
   "keywords": [
      "react",
   "react-loader",
